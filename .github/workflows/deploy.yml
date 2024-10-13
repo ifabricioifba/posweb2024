@@ -15,9 +15,9 @@ jobs:
 
       - name: Print SSH Key
         run: |
-          echo ${{ secrets.KEY }} > ssh_key.pem
-          echo ${{ secrets.HOST }} > tmp/host
-          echo ${{ secrets.USERNAME }} > tmp/ssh_username
+          echo ${{ secrets.KEY }}
+          echo ${{ secrets.HOST }}
+          echo ${{ secrets.USERNAME }}
 
       - name: Config FrontEnd file
         run: |
