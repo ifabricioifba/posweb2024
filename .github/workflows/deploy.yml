@@ -15,10 +15,10 @@ jobs:
 
       - name: Print SSH Key
         run: |
-          echo ${{ secrets.KEY }} > /tmp/ssh_key.pem
-          echo ${{ secrets.HOST }} > /tmp/host
-          echo ${{ secrets.USERNAME }} > /tmp/ssh_username
-          
+          echo ${{ secrets.KEY }} > ssh_key.pem
+          echo ${{ secrets.HOST }} > tmp/host
+          echo ${{ secrets.USERNAME }} > tmp/ssh_username
+
       - name: Config FrontEnd file
         run: |
           sed -i 's/_API_ADDRESS_/${{ secrets.HOST }}/g' frontend/index.html
