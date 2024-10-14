@@ -79,7 +79,7 @@ def update_person(id):
     conn.commit()
     cursor.close()
 
-    return jsonify({'message': 'Person updated successfully!'})
+    return jsonify({'message': 'Pessoa atualizada com sucesso!'})
 
 # Delete a person (D in CRUD)
 @app.route('/people/<int:id>', methods=['DELETE'])
